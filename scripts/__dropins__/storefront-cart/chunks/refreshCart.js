@@ -80,18 +80,6 @@ query STORE_CONFIG_QUERY {
     shopping_cart_display_tax_gift_wrapping
     shopping_cart_display_zero_tax
     configurable_thumbnail_source
-    allow_gift_wrapping_on_order
-    allow_gift_wrapping_on_order_items
-    allow_order
-    allow_items
-    allow_gift_receipt
-    allow_printed_card
-    printed_card_priceV2 {
-      currency
-      value
-    }
-    cart_gift_wrapping
-    cart_printed_card
   }
 }
 `,br=async()=>S(hr,{method:"GET",cache:"force-cache"}).then(({errors:r,data:n})=>r?I(r):yr(n.storeConfig)),xr=async()=>{const r=o.authenticated?await B():await W();return y.emit("cart/data",r),r};export{A as C,E as a,B as b,V as c,W as d,br as e,D as g,$ as i,xr as r,k as t};
